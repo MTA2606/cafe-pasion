@@ -4,6 +4,8 @@
   "description": "Sitio web profesional y catálogo visual para Café Pasión",
   "private": true,
   "scripts": {
+    "predeploy": "npm --prefix frontend run build && node -e \"const fs=require('fs'); fs.copyFileSync('frontend/dist/index.html', 'frontend/dist/404.html'); fs.writeFileSync('frontend/dist/.nojekyll', '');\"",
+    "deploy": "gh-pages -d frontend/dist",
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",
     "db:init": "npm --prefix backend run db:init",
@@ -15,8 +17,12 @@
     "react",
     "vite",
     "express",
-    "sqlite"
+    "sqlite",
+    "gh-pages"
   ],
   "author": "Café Pasión Team",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
