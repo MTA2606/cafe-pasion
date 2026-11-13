@@ -1,0 +1,203 @@
+/* ========================================================
+   CAFÉ PASIÓN - SISTEMA DE DISEÑO E IDENTIDAD VISUAL
+   ======================================================== */
+
+/* 1. Importación de Bootstrap 5 */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* 2. Variables del Sistema de Diseño (Paleta Café Pasión) */
+:root {
+  /* Paleta Principal */
+  --cafe-espresso: #2C1810;     /* Espresso profundo: textos principales, headers, footer */
+  --cafe-tostado: #6F4E37;      /* Café tostado: títulos secundarios, badges, acentos */
+  --cafe-dorado: #C89D54;       /* Dorado / Caramelo: botones principales, acentos y resaltados */
+  --cafe-dorado-hover: #B3863E; /* Dorado oscuro para estados hover */
+  --cafe-caramelo: #C89D54;     /* Alias para caramelo */
+  --cafe-crema: #FAF6F0;        /* Crema cálido: fondo general del sitio y secciones suaves */
+  --cafe-crema-dark: #EDE3D5;   /* Crema oscuro para bordes y separadores */
+  --cafe-blanco: #FFFFFF;       /* Blanco puro: fondos de tarjetas y modales */
+  
+  /* Textos */
+  --cafe-texto: #33231B;        /* Texto de lectura con alto contraste */
+  --cafe-texto-muted: #756258;  /* Texto secundario y leyendas */
+  
+  /* Estados y Acentos */
+  --whatsapp-green: #25D366;    /* Verde oficial de WhatsApp */
+  --whatsapp-hover: #1EBE5D;
+  --cafe-danger: #B33939;
+
+  /* Tipografías */
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transiciones y Sombras */
+  --transition-smooth: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 4px 18px rgba(44, 24, 16, 0.06);
+  --shadow-hover: 0 12px 28px rgba(44, 24, 16, 0.14);
+}
+
+/* 3. Estilos Globales */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--cafe-crema);
+  color: var(--cafe-texto);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografías de Título */
+h1, h2, h3, h4, h5, h6,
+.font-title,
+.navbar-brand {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--cafe-espresso);
+  letter-spacing: -0.01em;
+}
+
+/* 4. Botones Temáticos Café Pasión */
+.btn-cafe-dorado {
+  background-color: var(--cafe-dorado);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border: 1px solid var(--cafe-dorado);
+  padding: 0.65rem 1.4rem;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(200, 157, 84, 0.25);
+}
+
+.btn-cafe-dorado:hover {
+  background-color: var(--cafe-dorado-hover);
+  border-color: var(--cafe-dorado-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(200, 157, 84, 0.35);
+}
+
+.btn-cafe-outline {
+  background-color: transparent;
+  color: var(--cafe-espresso) !important;
+  font-weight: 600;
+  border: 2px solid var(--cafe-espresso);
+  padding: 0.6rem 1.35rem;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-cafe-outline:hover {
+  background-color: var(--cafe-espresso);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+.btn-cafe-outline-light {
+  background-color: transparent;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  padding: 0.6rem 1.35rem;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-cafe-outline-light:hover {
+  background-color: #FFFFFF;
+  color: var(--cafe-espresso) !important;
+  transform: translateY(-2px);
+}
+
+/* 5. Tarjetas con Transiciones Suaves y Hover */
+.card-cafe {
+  background-color: var(--cafe-blanco);
+  border: 1px solid var(--cafe-crema-dark);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.card-cafe:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--cafe-dorado);
+}
+
+/* 6. Insignias (Badges) */
+.badge-categoria {
+  background-color: rgba(200, 157, 84, 0.15);
+  color: var(--cafe-tostado);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.badge-dxn {
+  background-color: #EBF8F2;
+  color: #1E7E34;
+  border: 1px solid #C3E6CB;
+}
+
+/* 7. Utilidades de Sección */
+.section-padding {
+  padding: 5rem 0;
+}
+
+.bg-crema {
+  background-color: var(--cafe-crema);
+}
+
+.bg-espresso {
+  background-color: var(--cafe-espresso);
+  color: #FFFFFF;
+}
+
+.text-gold {
+  color: var(--cafe-dorado) !important;
+}
+
+.text-muted-cafe {
+  color: var(--cafe-texto-muted) !important;
+}
+
+/* 8. Animaciones Suaves */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}

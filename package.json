@@ -1,0 +1,22 @@
+{
+  "name": "cafe-pasion",
+  "version": "1.0.0",
+  "description": "Sitio web profesional y catálogo visual para Café Pasión",
+  "private": true,
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "db:init": "npm --prefix backend run db:init",
+    "test:backend": "npm --prefix backend test",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "cafe-pasion",
+    "react",
+    "vite",
+    "express",
+    "sqlite"
+  ],
+  "author": "Café Pasión Team",
+  "license": "ISC"
+}
